@@ -97,7 +97,7 @@ class Board
 
     self.send(:define_method, "#{item}_value") do |index|
       instance_exec(index, &access_error_check)
-      value!(item.to_sym => index)
+      value(item.to_sym => index)
     end
   end
 
